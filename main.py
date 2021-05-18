@@ -1,4 +1,3 @@
-import math
 import sys
 
 a = -1.6514
@@ -10,7 +9,8 @@ debug = True
 debug = False
 maxIter = 1000
 
-f = open("log.txt", "w")
+fname = "log.txt"
+f = open(fname, "w")
 
 def f1(x):
     return 2*x
@@ -85,10 +85,3 @@ if __name__ == '__main__':
     f.close()
     print("OK")
     sys.exit(0)
-
-
-
-
-
-
-
