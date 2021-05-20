@@ -1,9 +1,10 @@
+import math
 import sys
 
-a = -1.6514
-b = 0.1514
+a = 0.25 * (-3 - math.sqrt(13))
+b = 0.25 * (-3 + math.sqrt(13))
 p = 4
-eps = 1E-4
+eps = 0.5 * 1E-4
 
 debug = True
 debug = False
@@ -78,8 +79,12 @@ if __name__ == '__main__':
     print("Calculating...")
     f.write("Function f1(x) = 2*x\n")
     interg1 = calc(lambda x: f1(x))
+    f.write("For function " + "f1(x) = 2*x" + " integral in range [" + str(a) + " , " + str(b) + "] is \n")
+    f.write("integral = " + str(interg1) + "\n")
     f.write("\nFunction f2(x) = 2*x^2 + 5*x - 0.5\n")
     interg2 = calc(lambda x: f2(x))
+    f.write("For function " + "f2(x) = 2*x^2 + 5*x - 0.5" + " integral in range [" + str(a) + " , " + str(b) + "] is \n")
+    f.write("integral = " + str(interg2) + "\n")
     area = interg1 - interg2
     f.write("\narea = " + str(area) + "\n")
     f.close()
